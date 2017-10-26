@@ -26,16 +26,16 @@ public class Pokemon{
 	public int getAtk(){
 		return atk;
 	}
-	public double getSpAtk(){
+	public int getSpAtk(){
 		return spatk;
 	}
-	public double getDef(){
+	public int getDef(){
 		return def;
 	}
-	public double getSpDef(){
+	public int getSpDef(){
 		return spdef;
 	}
-	public double getSpeed(){
+	public int getSpeed(){
 		return speed;
 	}
 	public String toString(){
