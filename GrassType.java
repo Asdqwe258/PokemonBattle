@@ -19,13 +19,13 @@ public class GrassType extends Pokemon{
 	public int getAtk(){
 		return atk;
 	}
-	public double getspAtk(){
+	public double getSpAtk(){
 		return spatk;
 	}
 	public double getDef(){
 		return def;
 	}
-	public double getspDef(){
+	public double getSpDef(){
 		return spdef;
 	}
 	public double getSpeed(){
