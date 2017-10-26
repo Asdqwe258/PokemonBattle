@@ -1,4 +1,4 @@
-
+import java.util.Random;
 public class Pokemon {
 
 	public void atk(Pokemon enemy){
