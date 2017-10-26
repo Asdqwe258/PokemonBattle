@@ -31,5 +31,8 @@ public class GrassType extends Pokemon{
 	public double getSpeed(){
 		return speed;
 	}
+	public String toString(){
+		return ("Health: " + health + "\nAttack: " + atk + "\nSpecial Attack: " + "\nDefense: " + def + "\nSpecial Defense: " + spdef + "\nSpeed: " + speed);
+	}
 	
 }
