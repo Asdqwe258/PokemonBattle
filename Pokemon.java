@@ -15,12 +15,11 @@ public class Pokemon{
 		speed = f;
 		type = g;
 	}
-	public void atk(Pokemon a, Pokemon b){
-		health = b.getHealth() - (11/25)*(a.getAtk()/b.getDef()) + 2;
+	public void atk(Pokemon b){
+		health = b.getHealth() - (11/25)*(atk/b.getDef()) + 2;
 	}
-	public void spAtk(Pokemon a,Pokemon b){
-		health = b.getHealth() - (11/25)*(a.getSpAtk()/b.getSpDef()) + 2;
-
+	public void spAtk(Pokemon b){
+		health = b.getHealth() - (11/25)*(spatk/b.getSpDef()) + 2;
 	}
 	public double getHealth(){
 		return health;
