@@ -1,4 +1,3 @@
-import java.util.Random;
 public class Pokemon{
 	double health;
 	int atk;
@@ -19,6 +18,7 @@ public class Pokemon{
 	}
 	public void spAtk(Pokemon a,Pokemon b){
 		health = b.getHealth() - (11/25)*(a.getSpAtk()/b.getSpDef()) + 2;
+
 	}
 	public double getHealth(){
 		return health;
