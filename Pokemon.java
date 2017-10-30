@@ -1,17 +1,19 @@
 public class Pokemon{
 	double health;
-	int atk;
-	int spatk;
-	int def;
-	int spdef;
-	int speed;
-	public Pokemon(double a, int b, int c, int d, int e, int f) {
+	private int atk;
+	private int spatk;
+	private int def;
+	private int spdef;
+	private int speed;
+	private int type;
+	public Pokemon(double a, int b, int c, int d, int e, int f, int g) {
 		health = a;
 		atk = b;
 		spatk = c;
 		def = d;
 		spdef = e;
 		speed = f;
+		type = g;
 	}
 	public void atk(Pokemon a, Pokemon b){
 		health = b.getHealth() - (11/25)*(a.getAtk()/b.getDef()) + 2;
@@ -37,6 +39,9 @@ public class Pokemon{
 	}
 	public int getSpeed(){
 		return speed;
+	}
+	public int getType(){
+		return type;
 	}
 	public String toString(){
 		return ("Health: " + health + "\nAttack: " + atk + "\nSpecial Attack: " + "\nDefense: " + def + "\nSpecial Defense: " + spdef + "\nSpeed: " + speed);
