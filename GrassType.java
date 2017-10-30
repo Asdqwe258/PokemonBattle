@@ -1,7 +1,6 @@
 public class GrassType extends Pokemon{
 
 	public GrassType(double a, int b, int c, int d, int e, int f){
-		super(a, b, c, d, e, f);
-		type = 1;
+		super(a, b, c, d, e, f, 2);
 	}
 }
