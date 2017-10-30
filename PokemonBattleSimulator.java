@@ -16,4 +16,9 @@ public class PokemonBattleSimulator{
         if((FirstPokemonType == 3 && SecondPokemonType == 1)||(FirstPokemonType == 1 && SecondPokemonType == 2) || (FirstPokemonType == 2 && SecondPokemonType == 3))
                 advantage = .5;
         }
+        System.out.println("Please enter the stats of your first pokemon: ");
+        Pokemon ababa = new Pokemon(keyboard.nextDouble(), keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt());
+        System.out.println("Please enter the stats of your second pokemon: ");
+        Pokemon cdcdc = new Pokemon(keyboard.nextDouble(), keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt());
+
 
