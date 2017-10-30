@@ -22,4 +22,6 @@ public class PokemonBattleSimulator{
         Pokemon cdcdc = new Pokemon(keyboard.nextDouble(), keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt());
         System.out.println("Choose your next action. Press 1 to attack or 2 to special attack:");
         nextAction = keyboard.nextInt();
+        if(nextAction == 1){
+                
 
