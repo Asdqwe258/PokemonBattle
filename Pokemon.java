@@ -16,15 +16,15 @@ public class Pokemon{
 		type = g;
 	}
 	public void atk(Pokemon b){
-		b.setHealth(b.getHealth() - (11/25)*(atk/b.getDef()) + 2);
+		b.gotHit(b.getHealth() - (11/25)*(atk/b.getDef()) + 2);
 	}
 	public void spAtk(Pokemon b){
-		b.setHealth(b.getHealth() - (11/25)*(spatk/b.getSpDef()) + 2);
+		b.gotHit(b.getHealth() - (11/25)*(spatk/b.getSpDef()) + 2);
 	}
 	public double getHealth(){
 		return health;
 	}
-	public void setHealth(double h){
+	public void gotHit(double h){
 		health = h;
 	}
 	public int getAtk(){
