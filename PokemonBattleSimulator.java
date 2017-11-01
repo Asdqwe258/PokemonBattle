@@ -11,10 +11,7 @@ public class PokemonBattleSimulator{
         int FirstPokemonType = keyboard.nextInt(); // chooses type of Pokemon
         System.out.print("Please choose the second Pokemon type: If you want to choose a Grass type press 1 \nif you want to choose a Fire type press 2 \nif you want to choose a Water type press 3");
         int SecondPokemonType = keyboard.nextInt();
-        double advantage = 0;
-        if(FirstPokemonType == SecondPokemonType){ // type advantage calculation
-               advantage = 1.0;
-        }
+        double advantage = 1.0;
         if((FirstPokemonType == 1 && SecondPokemonType == 3)||(FirstPokemonType == 2 && SecondPokemonType == 1) || (FirstPokemonType == 3 && SecondPokemonType == 2)){
                advantage = 2.0;
         }
