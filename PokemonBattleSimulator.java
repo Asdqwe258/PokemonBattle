@@ -17,13 +17,37 @@ public class PokemonBattleSimulator{
                 advantage = .5;
         }
         System.out.println("Please enter the stats of your first pokemon: ");
-        Pokemon ababa = new Pokemon(keyboard.nextDouble(), keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt());
+        Pokemon ababa = new Pokemon(keyboard.nextDouble(), keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),FirstPokemonType);
         System.out.println("Please enter the stats of your second pokemon: ");
-        Pokemon cdcdc = new Pokemon(keyboard.nextDouble(), keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt());
-        System.out.println("Choose your next action. Press 1 to attack or 2 to special attack:");
-        nextAction = keyboard.nextInt();
-        if(ababa.getSpeed() > cdcdc.getSpeed()){
-                if(nextAction == 1){
-                        ababa.getAtk();
+        Pokemon cdcdc = new Pokemon(keyboard.nextDouble(), keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),SecondPokemonType);
+              
+        while(ababa.getHealth() > 0 && cdcdc.getHealth() > 0){
+                System.out.println("Choose your next action for Pokemon 1. Press 1 to attack or 2 to special attack:");
+                nextAction1 = keyboard.nextInt();
+                System.out.println("Choose your next action for Pokemon 1. Press 1 to attack or 2 to special attack:");
+                nextAction2 = keyboard.nextInt();
+                if(ababa.getSpeed() > cdcdc.getSpeed()){
+                        ababa.atk(cdcdc,nextAction1);
+                        if(cdcdc.getHealth() < 0){
+                             break;
+                        }
+                        cdcdc.atk(ababa,nextAction2);                                                               
+                }
+                else if(ababa.getSpeed() < cdcdc.getSpeed()){
+                        cdcdc.atk(ababa.nextAction2);
+                        if(ababa.getHealth() < 0){
+                                break;
+                        }
+                        ababa.atk(cdcdc.nextAction1);
+                }
+        }
+        if(ababa.getHealth < 0){
+                System.out.println("Pokemon 1 loses!");
+        }
+        else{
+                System.out.println("Pokemon 2 loses!");
+        }
+                     
                 
+               
 
