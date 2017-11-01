@@ -17,10 +17,10 @@ public class Pokemon{
 	}
 	public void atk(Pokemon b, int a, double ii, double r){
 		if(a == 1){
-			b.gotHit((b.getHealth() - (11/25)*(atk/b.getDef()) + 2)*ii*r);
+			b.gotHit((b.getHealth() - ((11/25)*(atk/b.getDef()) + 2)*ii*r));
 		}
 		else if(a == 2){
-			b.gotHit((b.getHealth() - (11/25)*(spatk/b.getSpDef()) + 2)*ii*r);
+				b.gotHit((b.getHealth() - ((11/25)*(spatk/b.getSpDef()) + 2)*ii*r));
 		}
 	}
 	public double getHealth(){
