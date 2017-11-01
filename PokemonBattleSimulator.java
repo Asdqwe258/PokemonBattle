@@ -1,6 +1,8 @@
+import java.util.Random
 import java.util.Scanner;
 public class PokemonBattleSimulator{
         public static void main(String args[]) {
+        Random random = new Random();
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Please choose the first Pokemon type: If you want to choose a Grass type press 1, if you want to choose a Fire type press 2, if you want to choose a Water type press 3");
         FirstPokemonType = keyboard.nextInt();
@@ -22,23 +24,24 @@ public class PokemonBattleSimulator{
         Pokemon cdcdc = new Pokemon(keyboard.nextDouble(), keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),keyboard.nextInt(),SecondPokemonType);
               
         while(ababa.getHealth() > 0 && cdcdc.getHealth() > 0){
+                vary = random.nextDouble();
                 System.out.println("Choose your next action for Pokemon 1. Press 1 to attack or 2 to special attack:");
                 nextAction1 = keyboard.nextInt();
                 System.out.println("Choose your next action for Pokemon 1. Press 1 to attack or 2 to special attack:");
                 nextAction2 = keyboard.nextInt();
                 if(ababa.getSpeed() > cdcdc.getSpeed()){
-                        ababa.atk(cdcdc,nextAction1);
+                        ababa.atk(cdcdc,nextAction1,advantage,vary);
                         if(cdcdc.getHealth() < 0){
                              break;
                         }
-                        cdcdc.atk(ababa,nextAction2);                                                               
+                        cdcdc.atk(ababa,nextAction2,1/advantage,vary);                                                               
                 }
                 else if(ababa.getSpeed() < cdcdc.getSpeed()){
-                        cdcdc.atk(ababa.nextAction2);
+                        cdcdc.atk(ababa,nextAction2,1/advantage,vary);
                         if(ababa.getHealth() < 0){
                                 break;
                         }
-                        ababa.atk(cdcdc.nextAction1);
+                        ababa.atk(cdcdc,nextAction1,advantage,vary);
                 }
         }
         if(ababa.getHealth < 0){
